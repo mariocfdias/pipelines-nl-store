@@ -61,7 +61,7 @@ function App() {
     },
   ];
 
-  const [cart, setCart] = useState({
+  const [cart] = useState({
     totalValue: 0.0,
     itemsNumber: 0,
     items: [],
@@ -75,7 +75,7 @@ function App() {
 
   return (
     <div className="App">
-      <Modal data={cart} isOpen={modal} setIsOpen={setModal} />
+      <Modal isOpen={modal} setIsOpen={setModal} />
       <div>
         <div className="flex justify-between w-full p-5 font-bold bg-white drop-shadow-xl">
           <div>
