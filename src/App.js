@@ -61,7 +61,7 @@ function App() {
     },
   ];
 
-  const [cart] = useState({
+  const [cart, setCart] = useState({
     totalValue: 0.0,
     itemsNumber: 0,
     items: [],
@@ -70,13 +70,17 @@ function App() {
   const [modal, setModal] = useState(false);
 
   function addItem(item) {
-    
+    setCart({
+      totalValue: cart.totalValue + item.value,
+      itemsNumber: cart.itemsNumber+1,
+      items: [...cart.items, item],
+    })
+    console.log(cart.totalValue)
   }
 
   return (
     <div className="App">
-      <Modal isOpen={modal} setIsOpen={setModal} />
-      <div>
+      <Modal data={cart} isOpen={modal} setIsOpen={setModal} />      <div>
         <div className="flex justify-between w-full p-5 font-bold bg-white drop-shadow-xl">
           <div>
             <p className="inline text-red-500">N&L</p> Store

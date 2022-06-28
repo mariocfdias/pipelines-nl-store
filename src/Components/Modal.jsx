@@ -34,8 +34,8 @@ export default function Modal(props) {
           <div className="w-full h-1 my-2 bg-gray-700"></div>
           <div className="flex justify-between p-2">
             <p>Total</p>
-            <p>{formatMoney(0)}</p>
-          </div>
+            <p>{formatMoney(props.data.totalValue)}</p>         
+             </div>
         </div>
       </div>
     </div>
