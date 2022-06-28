@@ -8,7 +8,7 @@ function App() {
     {
       id: 0,
       name: "Frango Assado com toque de Limão",
-      price: 1.5,
+      price: 1.50,
       img: "https://www.extraplus.com.br/uploads/produtos/350x350/37222_20171106162523_thumb_37222_MacarraoInstantaneoLamenNissinMiojoFrangoAssadocomToquedeLimao85g.jpg",
     },
     {
