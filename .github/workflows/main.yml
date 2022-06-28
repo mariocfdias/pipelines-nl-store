@@ -1,4 +1,4 @@
-name: Deploy CD Workflow
+name: Build de projeto
 
 on:
   push:
@@ -8,22 +8,21 @@ on:
   
 jobs:
   deploy-web:
-    name: Build & Publish
+    name: Build
     runs-on: ubuntu-latest
     steps:
-
-    - name: Checkout
+    - name: Checkout para branch main
       uses: actions/checkout@v2
 
-    - name: Set up Node.js ⚙
+    - name: Configura NodeJs
       uses: actions/setup-node@v2
       with:
           node-version: "16.x"
-    - name: Set up Yarn 
+    - name: Configurar Yarn 
       run: npm install -g yarn
 
-    - name: Install dependencies 
-      run: yarn install --frozen-lockfile
+    - name: Instalar dependencias
+      run: yarn install
 
-    - name: Create a production build
+    - name: Buildar projeto
       run: yarn build
