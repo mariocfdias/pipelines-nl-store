@@ -10,6 +10,6 @@ it("Checar adição de apenas um produto no carrinho", () => {
 });
 
 it("Teste de caso falho", () => {
-  expect(true).to.equal(true)
+  expect(true).to.equal(false)
 });
 
