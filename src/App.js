@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { formatMoney } from "./utils/formatMoney";
+import Modal from "./Components/Modal";
 
 function App() {
   const array = [
