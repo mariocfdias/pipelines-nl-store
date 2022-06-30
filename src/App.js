@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import Modal from "./Components/Modal";
 import { formatMoney } from "./utils/formatMoney";
 
 function App() {
